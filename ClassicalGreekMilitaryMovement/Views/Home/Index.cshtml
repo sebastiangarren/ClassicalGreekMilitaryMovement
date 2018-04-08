@@ -1,25 +1,16 @@
-﻿<head>
-    <title>Hoplite March</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    
-    <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgIP66sdwD8EfcvSdtWKHcGFmZzSlT67Y&callback=initMap">
-    </script>
-</head>
-
-
-<body>
-    <!---->
+﻿
+    <!--
+    Title - Logo    
+    -->
     <div class="container-fluid">
         <h1 style="color:darkcyan">Hoplites of Classical Greece</h1>
         <p>Discover the time it takes armies to move!</p>
     </div>
+    <!--
+    Table of Cities - Map
+    -->
 
-    <div class="row">
+    <div class="container-fluid">
         <div class="col-sm-2">
             <table class="table table-striped">
                 <thead>
@@ -47,7 +38,7 @@
             </table>
         </div>
     
-        <div class="col-sm-10" id="map" style="height: 440px; width: ">
+        <div class="col-sm-10" id="map" style="height: 440px; width: 800px">
 
             <script>
                 var map;
@@ -61,49 +52,109 @@
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-sm-1">
-        </div>
+    <!--
+    FromButton - ToButton
+    -->
 
-        <div class="col-sm-5">
-        
-            <div class="dropdown">
-                <h2>
-                    From:
+
+    <div class="container-fluid">
+        <div class="col-sm-1"></div>
+            <div class="col-sm-2">
+                <h2>From:</h2>
+            </div>
+
+            <div class="col-sm-3" style="padding-top: 20px">
+
+                <div class="dropdown">
+
                     <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
                         City
                         <span class="caret"></span>
                     </button>
-                </h2>
+
                     <ul class="dropdown-menu">
                         <li><a href="#">Athens</a></li>
                         <li><a href="#">Sparta</a></li>
                         <li><a href="#">Corinth</a></li>
                     </ul>
+                </div>
             </div>
 
-        </div>
-        
-        <div class="col-sm-6">
+            <div class="col-sm-1">
+                <h2>To:</h2>
+            </div>
+            <div class="col-sm-5" style="padding-top: 20px">
+                <div class="dropdown">
 
-            <div class="dropdown">
-                <h2>
-                   To:
                     <button class="btn btn-dropdown btn-success" type="button" data-toggle="dropdown">
                         City
                         <span class="caret"></span>
                     </button>
-                </h2>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Athens</a></li>
-                    <li><a href="#">Sparta</a></li>
-                    <li><a href="#">Corinth</a></li>
-                </ul>
-            </div>
 
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Athens</a></li>
+                        <li><a href="#">Sparta</a></li>
+                        <li><a href="#">Corinth</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    <!--
+    Numerical Input - Weather - Submit
+    -->
+    <div class="container-fluid">
+        <div class="col-sm-1"></div>
+
+        <div class="col-sm-5" style="padding-top: 20px">
+            <div class="input-group">
+                <span class="input-group-addon" style="background-color: ButtonFace">Army Size:</span>
+                <input id="armysize" type="number" class="form-control" name="armysize" placeholder="Size of the Hoplite Force">
+            </div>
+        </div>
+        
+
+        <div class="col-sm-2">
+            <h2>Weather:</h2>
+        </div>
+        <div class="col-sm-2 dropdown" style="padding-top: 20px">
+                
+                <button class="btn btn-dropdown btn-success" type="button" data-toggle="dropdown">
+                    Type
+                    <span class="caret"></span>
+                </button>
+                    
+                <ul class="dropdown-menu">
+                    <li>Rain</li>
+                    <li>Shine</li>
+                    <li>Raining Hoplons</li>
+                </ul>
+        </div>
+
+
+        <div class="col-sm-2" style="padding-top: 20px">
+
+
+            <button class="btn btn-dropdown btn-danger" type="submit" data-toggle="dropdown">
+                        Calculate!
+            </button>
+
+            <button class="btn btn-dropdown btn-success" type="button" data-toggle="dropdown">
+                <span class="glyphicon glyphicon-save"></span>
+            </button>
 
         </div>
+    
+    
+    
+    </div>
+
+    <!--
+    Output Box - Copy
+    -->
+
+
 
    
     
-</body>
+
