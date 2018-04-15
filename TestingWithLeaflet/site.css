@@ -1,0 +1,28 @@
+body{
+}
+
+#mapid {
+ height: 480px;
+ width: 440px;
+}
+
+#bg-1 {
+	background-color: #474e5d; /* Dark Blue */
+	color: #ffffff;
+}
+
+#bg-2 {
+	background-color: #ff96e8; /*Pink */
+	color: #ffffff;
+}
+
+#bg-3 {
+	background-color: #ffffff; /* White */
+	color: #555555;
+}
+
+#container-fluid {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+

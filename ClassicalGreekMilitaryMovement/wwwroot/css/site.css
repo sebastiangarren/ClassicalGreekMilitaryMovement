@@ -1,8 +1,14 @@
 ﻿body {
-    padding-top: 75px;
-    padding-bottom: 75px;
+    padding-top: 45px;
+    padding-bottom: 45px;
 }
 
-.container-fluid {
+#container-fluid {
     background-color: orange;
+}
+
+
+#mapid {
+    height: 480px;
+    width: 440px;
 }
