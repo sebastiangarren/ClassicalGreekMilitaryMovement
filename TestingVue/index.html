@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ViewTest</title>
+	<script src="https://unpkg.com/vue"></script>
+	
+  </head>
+
+  <body>
+
+  <!-- a variable or static message -->
+	<h3 id="app">
+  {{ message }}
+	</h3>
+
+  <!-- title with hover-->	
+	<div id="app-2">
+	  <h1 v-bind:title="message">
+		Hoplites of Classical Greece
+	  </h1>
+	</div>
+
+   <!-- variably visible text -->
+	<div id="app-3">
+	  <span v-if="seen">Now you see me</span>
+	</div>
+	
+	<!-- call a list of objects -->
+	<div id="app-4">
+	  <ul>
+		<li v-for="location in locations">
+		  {{ location.text }}
+		</li>
+	  </ul>
+	</div>
+	
+	 <!-- action on user click-->
+	<div id="app-5">
+	  <p>{{ message }}</p>
+	  <button v-on:click="reverseMessage">Reverse Message</button>
+	</div>	  
+	
+	<!--two-binding between form and app -->
+	<div id="app-6">
+	  <p>{{ message }}</p>
+	  <input v-model="message">
+	</div>
+
+	
+	<div id="app-7">
+	  <ul>
+		<!--
+		  Now we provide each todo-item with the todo object
+		  it's representing, so that its content can be dynamic.
+		  We also need to provide each component with a "key",
+		  which will be explained later.
+		-->
+		<todo-item
+		  v-for="item in groceryList"
+		  v-bind:todo="item"
+		  v-bind:key="item.id">
+		</todo-item>
+	  </ul>
+	</div>
+	
+	<script src="C:\Users\Dean of High School\lc101\ClassicalGreekMilitaryMovement\TestingVue\app.js"></script>
+	   
+	   
+<style>
+ h1 {
+ color: darkcyan;
+ }
+ 
+
+</style>	   
+
+
+  </body>
+</html>

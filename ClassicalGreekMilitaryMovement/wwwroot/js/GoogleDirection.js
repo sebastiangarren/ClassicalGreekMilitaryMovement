@@ -1,62 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Distance Matrix service</title>
-    <style>
-      #right-panel {
-        font-family: 'Roboto','sans-serif';
-        line-height: 30px;
-        padding-left: 10px;
-      }
-
-      #right-panel select, #right-panel input {
-        font-size: 15px;
-      }
-
-      #right-panel select {
-        width: 100%;
-      }
-
-      #right-panel i {
-        font-size: 12px;
-      }
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-      #map {
-        height: 100%;
-        width: 50%;
-      }
-      #right-panel {
-        float: right;
-        width: 48%;
-        padding-left: 2%;
-      }
-      #output {
-        font-size: 11px;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="right-panel">
-      <div id="inputs">
-        <pre>
-
-        var origin2 = 'Athens, Greece';
-        var destinationA = 'Thebes, Greece';
-      
-        </pre>
-      </div>
-      <div>
-        <strong>Results</strong>
-      </div>
-      <div id="output"></div>
-    </div>
-    <div id="map"></div>
-    <script>
-      function initMap() {
+﻿ function initMap() {
         var bounds = new google.maps.LatLngBounds;
         var markersArray = [];
 
@@ -108,9 +50,3 @@
         }
         markersArray = [];
       }
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgIP66sdwD8EfcvSdtWKHcGFmZzSlT67Y&callback=initMap">
-    </script>
-  </body>
-</html>

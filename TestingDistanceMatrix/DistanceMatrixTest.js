@@ -43,10 +43,10 @@
     <div id="right-panel">
       <div id="inputs">
         <pre>
-var origin1 = {lat: 55.930, lng: -3.118};
-var origin2 = 'Greenwich, England';
-var destinationA = 'Stockholm, Sweden';
-var destinationB = {lat: 50.087, lng: 14.421};
+        var origin1 = {lat: 37.59023, lng: 23.43401};
+        var origin2 = 'Athens, Greece';
+        var destinationA = 'Thebes, Greece';
+        var destinationB = {lat: 38.087, lng: 23.421};
         </pre>
       </div>
       <div>
@@ -57,29 +57,13 @@ var destinationB = {lat: 50.087, lng: 14.421};
     <div id="map"></div>
     <script>
       function initMap() {
-        var bounds = new google.maps.LatLngBounds;
-        var markersArray = [];
-
-        var origin1 = {lat: 55.93, lng: -3.118};
-        var origin2 = 'Greenwich, England';
-        var destinationA = 'Stockholm, Sweden';
-        var destinationB = {lat: 50.087, lng: 14.421};
-
-        var destinationIcon = 'https://chart.googleapis.com/chart?' +
-            'chst=d_map_pin_letter&chld=D|FF0000|000000';
-        var originIcon = 'https://chart.googleapis.com/chart?' +
-            'chst=d_map_pin_letter&chld=O|FFFF00|000000';
-        var map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 55.53, lng: 9.4},
-          zoom: 10
-        });
         var geocoder = new google.maps.Geocoder;
 
         var service = new google.maps.DistanceMatrixService;
         service.getDistanceMatrix({
           origins: [origin1, origin2],
           destinations: [destinationA, destinationB],
-          travelMode: 'DRIVING',
+          travelMode: 'WALKING',
           unitSystem: google.maps.UnitSystem.METRIC,
           avoidHighways: false,
           avoidTolls: false
@@ -92,22 +76,6 @@ var destinationB = {lat: 50.087, lng: 14.421};
             var outputDiv = document.getElementById('output');
             outputDiv.innerHTML = '';
             deleteMarkers(markersArray);
-
-            var showGeocodedAddressOnMap = function(asDestination) {
-              var icon = asDestination ? destinationIcon : originIcon;
-              return function(results, status) {
-                if (status === 'OK') {
-                  map.fitBounds(bounds.extend(results[0].geometry.location));
-                  markersArray.push(new google.maps.Marker({
-                    map: map,
-                    position: results[0].geometry.location,
-                    icon: icon
-                  }));
-                } else {
-                  alert('Geocode was not successful due to: ' + status);
-                }
-              };
-            };
 
             for (var i = 0; i < originList.length; i++) {
               var results = response.rows[i].elements;
@@ -133,7 +101,7 @@ var destinationB = {lat: 50.087, lng: 14.421};
       }
     </script>
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgIP66sdwD8EfcvSdtWKHcGFmZzSlT67Y&callback=initMap">
     </script>
   </body>
 </html>
