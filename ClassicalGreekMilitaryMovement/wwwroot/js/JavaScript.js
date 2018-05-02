@@ -6,3 +6,7 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
     id: 'mapbox.streets',
     accessToken: 'pk.eyJ1Ijoic2ViYXN0aWFuZ2FycmVuIiwiYSI6ImNqZnJoa2s2OTJramkzMG52ODMxNXFvaHYifQ.qFHF71NGXq17Mrud8YnOSA'
 }).addTo(mymap);
+
+
+var marker = L.marker([37.5, 23.01]).addTo(mymap);
+marker.bindPopup("<b>I'm blue.</b><br>But I'm in Greece, at least.").openPopup();

@@ -1,6 +1,6 @@
 ﻿// Write your JavaScript code.
 
-
+/*
     function initMap() {
         var bounds = new google.maps.LatLngBounds;
         var markersArray = [];
@@ -79,4 +79,4 @@
       }
 
 
-
+*/

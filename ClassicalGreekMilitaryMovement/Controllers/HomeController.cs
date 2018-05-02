@@ -15,7 +15,11 @@ namespace ClassicalGreekMilitaryMovement.Controllers
             return View();
         }
     
-
+        [HttpPost]
+        public IActionResult Calculate(int armySize )
+        {
+            return View();
+        }
     }
 
     

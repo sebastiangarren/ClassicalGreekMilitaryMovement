@@ -3,9 +3,16 @@
         var markersArray = [];
 
         
-        var origin2 = 'Athens, Greece';
-        var destinationA = 'Thebes, Greece';
-     
+        
+            var origin2 = document.getElementById("origin");
+            var origin2 = origin2.options[origin2.selectedIndex].text;
+            var origin2 = origin2 + ", Greece";
+        
+        //var destinationA = document.getElementById("destinationA");
+            var destinationA = document.getElementById("destination");
+            var destinationA = destinationA.options[destinationA.selectedIndex].text;
+            var destinationA = destinationA + ", Greece";
+  
 
         var destinationIcon = 'https://chart.googleapis.com/chart?' +
             'chst=d_map_pin_letter&chld=D|FF0000|000000';
@@ -21,7 +28,8 @@
           unitSystem: google.maps.UnitSystem.METRIC,
           avoidHighways: false,
           avoidTolls: false
-        }, function(response, status) {
+        },
+            function (response, status) {
           if (status !== 'OK') {
             alert('Error was: ' + status);
           } else {
@@ -50,3 +58,5 @@
         }
         markersArray = [];
       }
+
+
